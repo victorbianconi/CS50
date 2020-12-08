@@ -53,11 +53,6 @@ int main(void)
       ccNumber = ccNumber/10;
       count++;
   }
-  /*
-  printf("%i\n", noCount);
-  printf("%i\n", count);
-  printf("%i\n", sum2);
-  */
   if((sum2%10!=0) || ((count!=15) && (count!=16) && (count!=13)) || ((noCount == count*3))){
    printf("INVALID\n");   
   } 

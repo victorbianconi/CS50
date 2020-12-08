@@ -18,6 +18,7 @@ int main(void)
   int mod1;
   int mod2;
   int count = 0; //to count digits in credit card number.
+  int noCount = 0;
 
   //Prompting user for credit card number.
   do{
@@ -45,13 +46,21 @@ int main(void)
 
   //Credit Card Company Testing:
   while(ccNumber!=0){
-      if(ccNumber>50 && ccNumber<56 && count == 14 && sum2%10==0) return printf("MASTERCARD\n");
-      if(ccNumber==4 && (count==15 || count==12) && sum2%10==0) return printf("VISA\n");
-      if((ccNumber==34 || ccNumber==37) && count==13 && sum2%10==0) return printf("AMEX\n");
+      if(ccNumber>50 && ccNumber<56 && count == 14 && sum2%10==0) printf("MASTERCARD\n"); else noCount++;
+      if(ccNumber==4 && (count==15 || count==12) && sum2%10==0) printf("VISA\n"); else noCount++;
+      if((ccNumber==34 || ccNumber==37) && count==13 && sum2%10==0) printf("AMEX\n"); else noCount++;
       //"scrolling" and counting digits.
       ccNumber = ccNumber/10;
       count++;
   }
-  return printf("INVALID\n");
+  /*
+  printf("%i\n", noCount);
+  printf("%i\n", count);
+  printf("%i\n", sum2);
+  */
+  if((sum2%10!=0) || ((count!=15) && (count!=16) && (count!=13)) || ((noCount == count*3))){
+   printf("INVALID\n");   
+  } 
+  return 0;
 
 }

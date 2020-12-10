@@ -20,13 +20,7 @@ int main(int argc, string argv[])
       int key = atoi(argv[1]);
 
       string p = get_string("plaintext: ");
-      string upper = {"ABCDEFGHIJKLMNOPQRSTUVWXYZ"};
-      string lower = {"abcdefghijklmnopqrstuvwxyz"};
-
-      // string c[count];
-      //printf("%i", count);
-      //char c[count];
-      //  printf("%c", c);
+   
       printf("ciphertext: ");
 
       for(int i = 0, n = strlen(p); i < n; i++)

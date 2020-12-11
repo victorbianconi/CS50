@@ -70,9 +70,9 @@ int main(int argc, string argv[])
        {
           for (int j = 0; j < strlen(key); j++)
           {
-              if (plain[i] == alphaLower[j]) // as above ^ (but for upper case chars)
+              if (plain[i] == alphaLower[j]) // as above ^ (but for lower case chars)
               {
-                    printf("%c", tolower(key[j])); // as above ^ (but for upper case chars)
+                    printf("%c", tolower(key[j])); // as above ^ (but for lower case chars)
               }
           }
        }
